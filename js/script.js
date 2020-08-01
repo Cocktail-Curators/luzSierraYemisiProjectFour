@@ -83,3 +83,39 @@ function getIngredients(drinkId) {
       $(".ingredientsContainer").html(instruction);
     });
 }
+
+cocktailApp.urlRandomButton = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+
+const setRandomButton = function(){
+    // make AJAX request
+    $.ajax({
+        url: cocktailApp.urlRandomButton,
+        dataType: 'json',
+        method: 'GET'
+    }).then((results) => {
+        console.log(results);
+        // store random drink instructions from array in an instructions variable
+        instructions = results.drinks[0].strInstructions;
+        $('.randomLuckyContainer').append(instructions);
+        randomPicture = results.drinks[0].strThumb;
+        $('.randomLuckyContainer').append(randomPicture);
+    })
+}
+
+
+
+
+// get user input
+// listen for click event to generate random drink
+$('button').on('click', function(){
+  
+setRandomButton();
+
+})
+
+function newFunction(results) {
+  instructions = results.drinks[0].strInstructions;
+  $('.randomLuckyContainer').append('instructions');
+  randomPicture = results.drinks[0].strThumb;
+  $('.randomLuckyContainer').append('randomPicture');
+}
