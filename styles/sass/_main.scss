@@ -1,90 +1,101 @@
 .wrapper {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 body {
-    text-align: center;
-    font-size: 2rem;
-    font-family: $baseFont;
-    color:#333;
-    line-height: 25px;
-    letter-spacing: 0.2px;
-    background-image: linear-gradient(to right, #FFC3A0, #FFAFBD);
+  text-align: center;
+  font-size: 2rem;
+  font-family: $baseFont;
+  color: #333;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  background-image: linear-gradient(to right, #ffc3a0, #ffafbd);
 }
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 .firstSection {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 input[type="text"] {
-    width: 400px;
-    height: 40px;
+  width: 400px;
+  height: 40px;
 }
 input[type="submit"] {
-    @include buttons;
-    &:hover {
-        background-color: darkslateblue;
-        color:white;
-    }
+  @include buttons;
+  &:hover {
+    background-color: darkslateblue;
+    color: white;
+  }
 }
 ::placeholder {
-    font-size: 1.5rem;
-    
+  font-size: 1.5rem;
 }
 .randomButtonSection {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 .randomLuckyText p {
-    font-size: 3rem;
-    padding-bottom: 20px;
+  font-size: 3rem;
+  padding-bottom: 20px;
 }
 .randomLuckyText button {
-    @include buttons;
-    margin-left: 0;
-    padding:15px 25px;
-    margin-bottom: 20px;
-    transition: 0.2s;
-    &:hover {
-        background-color: darkslateblue;
-        color:white;
-    }
+  @include buttons;
+  margin-left: 0;
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  &:hover {
+    background-color: darkslateblue;
+    color: white;
+  }
 }
+
 .galleryDrinksContainer p {
-    width: max-content;
-    padding-bottom: 20px;
+  width: max-content;
+  padding-bottom: 20px;
 }
 .galleryDrinksContainer li {
-    width: calc(100% / 2);
+  width: calc(100% / 2);
 }
-.galleryDrinksContainer img {
-    width: 80%;
-    padding-bottom: 10px;
+img {
+  width: 80%;
+  padding-bottom: 10px;
 }
+
+.randomImage {
+  width: 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.galleryDrinksContainer .randomText {
+  margin: 0 auto;
+  width: 70%;
+}
+
 .galleryDrinksContainer ul {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .gallerySection {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .ingredientsContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    text-align: start;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: start;
+  margin-bottom: 20px;
 }
 .instructionsContainer {
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 70%;
-    
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 70%;
 }

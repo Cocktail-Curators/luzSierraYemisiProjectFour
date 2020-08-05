@@ -292,8 +292,8 @@ body {
   color: #333;
   line-height: 25px;
   letter-spacing: 0.2px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#FFC3A0), to(#FFAFBD));
-  background-image: linear-gradient(to right, #FFC3A0, #FFAFBD);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffc3a0), to(#ffafbd));
+  background-image: linear-gradient(to right, #ffc3a0, #ffafbd);
 }
 
 html {
@@ -385,9 +385,20 @@ input[type="submit"]:hover {
   width: calc(100% / 2);
 }
 
-.galleryDrinksContainer img {
+img {
   width: 80%;
   padding-bottom: 10px;
+}
+
+.randomImage {
+  width: 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.galleryDrinksContainer .randomText {
+  margin: 0 auto;
+  width: 70%;
 }
 
 .galleryDrinksContainer ul {
@@ -452,7 +463,7 @@ footer a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  input[type='text'] {
+  input[type="text"] {
     margin-bottom: 15px;
   }
 }
@@ -470,7 +481,7 @@ footer a:hover {
   .randomLuckyText p {
     font-size: 2rem;
   }
-  input[type='text'] {
+  input[type="text"] {
     width: 290px;
   }
   .galleryDrinksContainer ul {
@@ -497,6 +508,10 @@ footer a:hover {
             flex-direction: column;
   }
   .instructionsContainer {
+    width: 100%;
+  }
+  .galleryDrinksContainer .randomText {
+    margin: 0 auto;
     width: 100%;
   }
 }
