@@ -56,10 +56,8 @@ cocktailApp.displayDrinksGallery = function (data) {
 
     cocktailApp.ulImgContainer.append(drinkContainer);
     $(".galleryDrinksContainer").html(cocktailApp.ulImgContainer);
-    // adding img on click handler (this needs to be called AFTER adding to screen or else .click method will not work)
-    // $(`[data-drink-id="${drinkId}"]`).on("click", function () {
-    //   console.log("YAYYY CLICKY");
-    // }); JQUERY IS NOT WORKING FOR THIS : (
+
+    // jQuery does not work for this
     document
       .querySelector(`[data-drink-id="${drinkId}"]`)
       .addEventListener("click", function () {
@@ -129,17 +127,20 @@ const setRandomButton = function () {
   }).then((results) => {
     $(".galleryDrinksContainer").empty();
     $(".ingredientsContainer").empty();
-    // console.log(results);
+
     // store random drink instructions from array in an instructions variable
     const randomResults = results.drinks[0];
     const randomPictureContainer = randomResults.strDrinkThumb;
     const randomImage = $("<img>").attr("src", randomPictureContainer);
-    console.log(randomImage);
     randomImage.attr("alt", "picture of cocktail");
+    randomImage.addClass("randomImage");
     $(".galleryDrinksContainer").append(randomImage);
+    const drinkName = $("<p>").html(randomResults.strDrink);
+    drinkName.addClass("randomText");
     const instructions = randomResults.strInstructions;
     const instructionsContainer = $("<p>").text(instructions);
-    $(".galleryDrinksContainer").append(instructionsContainer);
+    instructionsContainer.addClass("randomText");
+    $(".galleryDrinksContainer").append(drinkName, instructionsContainer);
   });
 };
 
